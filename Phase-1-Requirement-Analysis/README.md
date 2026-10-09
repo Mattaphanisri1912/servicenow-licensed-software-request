@@ -8,7 +8,7 @@ End-to-end automated software request system built in ServiceNow using Service C
 ## Phases Overview
 
 ### Phase 1: Requirement Analysis & Planning
-- Identified request specifications, catalog variables, and dynamic manager approval logic.
+- View the full requirements breakdown: [Phase 1 Document](./Phase-1-Requirement-Analysis/phase1_details.md)
 
 ### Phase 2: Service Catalog Configuration
 - Configured the **Licensed Software Request** catalog item.
