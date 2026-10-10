@@ -29,8 +29,8 @@ End-to-end automated software request system built in ServiceNow using Service C
   
 ### Phase 4: Data Migration, Testing & Security
 
-**Update Set XML:** [Download Phase 4 Update Set XML](./Phase%204:%20Data%20Migration,%20Testing%20%26%20Security/sys_remote_update_set_c73bf55a3b7b83102c85920f23e45a0c.xml)
-**Phase Details:** [View Phase 4 Folder](./Phase%204:%20Data%20Migration,%20Testing%20%26%20Security)
+- **Update Set XML:** [Download Phase 4 Update Set XML](./Phase%204:%20Data%20Migration,%20Testing%20%26%20Security/sys_remote_update_set_c73bf55a3b7b83102c85920f23e45a0c.xml)
+- **Phase Details:** [View Phase 4 Folder](./Phase%204:%20Data%20Migration,%20Testing%20%26%20Security)
 
 ---
 
