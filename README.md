@@ -11,7 +11,8 @@ End-to-end automated software request system built in ServiceNow using Service C
 - **Update Set XML:** [Download Phase 1 Update Set XML](./Phase-1-Requirement-Analysis/Download%20Phase%201%20Update%20Set%20XML.xml)
 - **Phase Details:** [View Phase 1 Folder](./Phase-1-Requirement-Analysis/)
   
-###[Phase 2: Backend Development & Configurations Data Architecture](./Phase2/README.md)
+### [Phase 2: Backend Development & Configurations Data Architecture](./Phase2/)
+
 - **Data Architecture:** (A Data-Driven Workflow Approach)
 - **Business Rules Configuration:** (`business_rule_config.png`)
 - **Automation Logic:** (`automation_flow_design.png`)
