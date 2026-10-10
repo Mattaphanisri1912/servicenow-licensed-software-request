@@ -56,4 +56,4 @@ Configured user annotations, tooltips, and example text directly on catalog item
 ![Platform Order Status](./Platform%20Order%20Status.png)
 
 ### 3. Service Portal Request Summary
-![Service Portal Request Summary](./Portal%20Request%20Summary.png)
+![Service Portal Request Summary](./Service%20Portal%20Request%20Summary.png)
