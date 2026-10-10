@@ -50,10 +50,10 @@ Configured user annotations, tooltips, and example text directly on catalog item
 ## 📸 Implementation Screenshots
 
 ### 1. Catalog Item Form Setup
-![Catalog Item Form](catalog_item_form.png)
+![Catalog Item Form](./Catalog%20Item%20Form.png)
 
 ### 2. Platform Order Confirmation
-![Platform Order Status](platform_order_status.png)
+![Platform Order Status](./Platform%20Order%20Status.png)
 
 ### 3. Service Portal Request Summary
-![Service Portal Request Summary](portal_request_summary.png)
+![Service Portal Request Summary](./Portal%20Request%20Summary.png)
