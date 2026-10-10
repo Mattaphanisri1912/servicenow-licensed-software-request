@@ -19,10 +19,13 @@ End-to-end automated software request system built in ServiceNow using Service C
 - **Automation Logic:**
   ![Automation Logic](./Phase%202:%20Backend%20Development%20%26%20Configurations%20Data%20Architecture/automation_flow_design.png)
 
-### Phase 3: Workflow & Flow Designer Setup
-- Built flow triggering on `sc_req_item` submission.
-- Added **Ask For Approval** action routing dynamically to the Requestor's Manager.
+### [Phase 3: UI/UX Development & Customization](./Phase%203:%20UI%20%2F%20UX%20Development%20%26%20Customization/)
 
+- **Interface Design:** Catalog Item creation and variable configuration (`software_name`, `version_required`, `license_justification`, `urgency`).
+- **Navigation Flow:** Service Catalog category placement and search indexing verification via Service Portal (`/sp`).
+- **Usability:** Validation checks and post-submission request order tracking (`REQxxxxxxx`).
+- **Tooltips & Help Text:** Added field annotations, example texts, and tooltips for user guidance.
+- 
 ### Phase 4: Testing & Deployment
 - Validated lifecycle across `sc_request`, `sc_req_item`, and `sc_task`.
 - Exported configurations via Update Set (`.xml`).
