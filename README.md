@@ -14,8 +14,8 @@ End-to-end automated software request system built in ServiceNow using Service C
 ### Phase 2: Backend Development & Configurations Data Architecture
 
 - **Data Architecture:** (A Data-Driven Workflow Approach)
-- **Business Rules Configuration:** (`business_rule_config.png`)
-- **Automation Logic:** (`automation_flow_design.png`)
+- **Business Rules Configuration:** [`business_rule_config.png`]
+- **Automation Logic:** [`automation_flow_design.png`]
 
 ### Phase 3: Workflow & Flow Designer Setup
 - Built flow triggering on `sc_req_item` submission.
