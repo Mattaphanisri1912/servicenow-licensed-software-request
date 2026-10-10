@@ -11,9 +11,10 @@ End-to-end automated software request system built in ServiceNow using Service C
 - **Update Set XML:** [Download Phase 1 Update Set XML](./Phase-1-Requirement-Analysis/Download%20Phase%201%20Update%20Set%20XML.xml)
 - **Phase Details:** [View Phase 1 Folder](./Phase-1-Requirement-Analysis/)
   
-### Phase 2: Service Catalog Configuration
-- Configured the **Licensed Software Request** catalog item.
-- Created variables: *Software Application*, *Business Justification*, *Device/Asset Tag*.
+###[Phase 2: Backend Development & Configurations Data Architecture](./Phase2/README.md)
+- **Data Architecture:** (A Data-Driven Workflow Approach)
+- **Business Rules Configuration:** (`business_rule_config.png`)
+- **Automation Logic:** (`automation_flow_design.png`)
 
 ### Phase 3: Workflow & Flow Designer Setup
 - Built flow triggering on `sc_req_item` submission.
