@@ -126,4 +126,4 @@ Validate the end-to-end execution of the flow:
    - **Email 2 (Request Received):** Sent to `abel.tuter@example.com` with subject `Your Software Installation Request Has Been Received - RITM0010013`.
    - **Email 3 (Group Task Assignment):** Sent to `fred.luddy@example.com` with subject `Catalog Task SCTASK0010012 has been assigned to group Software`.
 
-![Backend RITM Record List](./10_backend_ritm_sctask.png)
+![Backend RITM Record List](./10_backend_email_triggering.png)
