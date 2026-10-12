@@ -53,27 +53,27 @@ Configure individual variable properties (e.g., `software_name`):
 
 ---
 
-## Step 5: Flow Designer Workflow Creation
-Navigate to **Workflow Studio / Flow Designer** and build the automation flow:
-
-1. Go to **Process Automation > Flow Designer**.
-2. Click **New > Flow** and name it **Software Installation Request Flow**.
-3. Set **Trigger** to **Service Catalog**.
-4. Add **Action 1:** Ask For Approval on Requested Item (`sc_req_item`).
-5. Add **Action 2:** Create Catalog Task (`sc_task`).
+### 5. User & Manager Profile Setup (Prerequisite for Approval Routing)
+To ensure dynamic approval routing and email recipient evaluation function without `Email has no recipients` errors:
+1. Navigate to **`sys_user.list`**.
+2. Locate and open the submitting user record (e.g., **`System Administrator`**).
+3. Populate the **Manager** field with a valid manager record (e.g., **`Abel Tuter`**).
+4. Open **Abel Tuter's** user record and ensure the **Email** field is populated with a valid email address (e.g., `abel.tuter@example.com`).
+5. Click **Update** to save the user configuration.
 
 ![Flow Designer Canvas](./05_flow_designer_canvas.png)
 
 ---
 
-## Step 6: Catalog Task Field Mapping
-Configure the **Create Catalog Task** action inside Flow Designer:
+### 6. Build Flow Designer Canvas Workflow
+Navigate to **Process Automation > Flow Designer**, create a new flow named **`Software Installation Request Flow`**, and set the trigger to **`Service Catalog`**. 
 
-1. Expand Action 2 (**Create Catalog Task**).
-2. Set **Table** to `Catalog Task [sc_task]`.
-3. Set **Fulfillment Group** to `Software Support`.
-4. Map input variables (`software_name`, `business_justification`, etc.) from the trigger data pill into the Task Description / Work Notes.
-5. Save and **Activate** the flow.
+Configure the exact 5-step automated sequence:
+1. **Step 1 (Ask for Approval):** Triggers a dynamic approval request routed to `Trigger -> Requested Item Record -> Requested for -> Manager` (**Abel Tuter**).
+2. **Step 2 (Send Email - Approval Requested):** Automatically dispatches an email notification (**`Approval Needed: Software Installation Request - [RITM Number]`**) to the manager (**Abel Tuter**).
+3. **Step 3 (Send Email - Request Received Confirmation):** Sends an email notification (**`Your Software Installation Request Has Been Received - [RITM Number]`**) to the requester (**Abel Tuter** / Submitting user).
+4. **Step 4 (Create Catalog Task):** Upon manager approval, automatically creates a fulfillment catalog task (`SCTASK`) and assigns it to the **Software** assignment group.
+5. **Step 5 (Send Email - Task Assignment Notification):** Sends an email notification (**`Catalog Task SCTASK0010012 has been assigned to group Software`**) to the assignment group email (**`fred.luddy@example.com`**).
 
 ![Flow Task Mapping Action](./06_flow_task_mapping.png)
 
@@ -117,11 +117,13 @@ Submit the order and confirm the generated Request Number:
 
 ---
 
-## Step 10: Backend Record Verification (`RITM` & `SCTASK`)
-Verify record creation in the backend instance:
-
-1. Return to the main ServiceNow platform interface.
-2. Navigate to **Service Catalog > Open Records > Requested Items** (`sc_req_item.list`).
-3. Confirm that the new `RITM` record and linked catalog fulfillment task (`SCTASK`) were generated automatically by the flow.
+### 10. Verify Approvals, Tasks, and Outbound Email Logs
+Validate the end-to-end execution of the flow:
+1. **Approvals Verification:** Open **`sys_approval.list`**, locate the generated approval for **Abel Tuter**, right-click the state, and click **Approve**.
+2. **Catalog Task Verification:** Open **`sc_task.list`** and verify that task **`SCTASK0010012`** was created and assigned to group **Software**.
+3. **Email Logs Verification:** Navigate to **`sys_email.list`** and sort by **Created** (newest first) to verify all 3 requested email notifications generated successfully:
+   - **Email 1 (Approval Needed):** Sent to `abel.tuter@example.com` with subject `Approval Needed: Software Installation Request - RITM0010013`.
+   - **Email 2 (Request Received):** Sent to `abel.tuter@example.com` with subject `Your Software Installation Request Has Been Received - RITM0010013`.
+   - **Email 3 (Group Task Assignment):** Sent to `fred.luddy@example.com` with subject `Catalog Task SCTASK0010012 has been assigned to group Software`.
 
 ![Backend RITM Record List](./10_backend_ritm_sctask.png)
