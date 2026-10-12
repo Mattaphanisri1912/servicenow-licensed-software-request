@@ -34,8 +34,3 @@ End-to-end automated software request system built in ServiceNow using Service C
 
 ---
 
-## File Structure
-- `/Update-Sets/`: Exported `.xml` file containing all configurations.
-- `/Phase-1-Requirement-Analysis/`: Workflow & requirement planning docs.
-- `/Phase-2-Service-Catalog/`: Catalog item setup screenshots.
-- `/Phase-3-Workflow-Design/`: Flow Designer execution context screenshots.
